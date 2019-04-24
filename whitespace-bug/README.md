@@ -2,7 +2,9 @@
 
     Alan v3.0beta6 build 1880
 
-These tests replicate the problem mentioned in the newsgroup.
+These tests replicate the problem mentioned in the [Alan-IF Yahoo group]:
+
+- [BUG in Sentences-Space Handling in Output](https://groups.yahoo.com/neo/groups/alan-if/conversations/messages/3780)
 
 Running [`test.bat`](./test.bat) will produce again the [`example1.a3log`](./example1.a3log) transcript, which is seen as Git as being different in whitespace from the previously commited one.
 
@@ -36,3 +38,11 @@ It seems that this bug only shows up when using the StdLib (English or Italian a
 
 Tristano, 2019/04/24.
 
+
+<!-----------------------------------------------------------------------------
+                               REFERENCE LINKS                                
+------------------------------------------------------------------------------>
+
+[Alan-IF Yahoo group]: https://groups.yahoo.com/neo/groups/alan-if/info "Visit the Alan-IF Yahoo group"
+
+<!-- EOF -->
