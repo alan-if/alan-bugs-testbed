@@ -1,0 +1,49 @@
+
+
+Emporium Giorgio Alani 
+An adventure to test clothing. 
+(C) 2018 by Tristano Ajmone 
+Programmed with the ALAN Interactive Fiction Language v3.0beta6 build 1880
+.
+Standard Library v2.1 
+Version 1 
+All rights reserved. 
+
+Type EXITS to view the list of exits of a room. 
+Use the DBG command (DGB <ITEM NAME>) to show the coverage values of any
+clothing item.
+
+
+Outside Emporium Alani
+You're standing in front of the Giorgio Alani Emporium entrance. Two
+large brass doors await northward your entrance into the sanctuary of
+fashion consumism.
+
+> look
+Outside Emporium Alani
+You're standing in front of the Giorgio Alani Emporium entrance. Two
+large brass doors await northward your entrance into the sanctuary of
+fashion consumism. 
+
+> wait
+Time passes...
+
+> look
+Outside Emporium Alani
+You're standing in front of the Giorgio Alani Emporium entrance. Two
+large brass doors await northward your entrance into the sanctuary of
+fashion consumism. 
+
+> north
+As you move toward the doors they automagically slide open before you.
+
+Emporium Alani Main Hall
+This luxurious hall is the crossroad to the various clothing departments
+of the emporium. Two large brass doors lead the way south, out of the
+fashion temple and back into the world of mortal souls.There is a trashcan 
+here. Behind a desk stands the emporium manager. There is your personal
+assistant here.
+
+> 
+
+Do you want to RESTART, RESTORE, QUIT or UNDO? 

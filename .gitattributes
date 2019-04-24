@@ -1,0 +1,16 @@
+* text=auto
+
+*.a3c      binary
+*.a3log    text
+*.a3sol    text
+*.alan     text
+*.i        text
+*.ifid     text
+
+*.bat      text eol=crlf
+*.sh       text eol=lf
+
+*.md         text
+
+.gitattributes text
+.gitignore     text
