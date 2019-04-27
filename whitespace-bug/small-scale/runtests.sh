@@ -13,9 +13,11 @@ function ExecTest()
 
 function Compile()
 {
+  # $1: adventure source
+  # $2: compiler options
   Separator
-  echo -e "\e[94mCOMPILE \"\e[93m$1\e[94m\""
-  alan $1 > /dev/null 2>&1 || (
+  echo -e "\e[94mCOMPILE \"\e[93m$1\e[94m\" WITH OPTIONS: \"\e[93m$2\e[94m\""
+  alan $1 $2 > /dev/null 2>&1 || (
     echo -e "\e[91m*** COMPILATION FAILED! ***"
     echo -e "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     alan $1
@@ -55,8 +57,8 @@ function DiffTranscripts()
 rm *.a3c  *.a3log  polish_*.alan  > /dev/null 2>&1
 
 PolishSource "source_example.alan"  "polish_example.alan"
-Compile "source_example.alan" || exit
-Compile "polish_example.alan" || exit
+Compile "source_example.alan" "-debug" || exit
+Compile "polish_example.alan" "-debug" || exit
 
 ExecTest "source_example.a3c"  "test.a3sol"  "source_test.a3log"
 ExecTest "polish_example.a3c"  "test.a3sol"  "polish_test.a3log"
