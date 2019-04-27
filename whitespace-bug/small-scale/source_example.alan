@@ -8,17 +8,24 @@
 
 IMPORT 'inc_module.i'.
 
-    ADD TO EVERY location 
-      HAS room_alt_name "". -- (optional) alternative name to show in events. 
-      HAS room_exits "".    -- (optional) text listing the location exits. 
-    END ADD TO location. 
-
     SYNTAX examine = examine (obj)
       WHERE obj IsA THING
         ELSE "You can only examine things."
            examine = x (obj).
-
+    ----------------------------------------------------------------------------
+    ADD TO EVERY location 
+      HAS room_alt_name "". -- (optional) alternative name to show in events. 
+      HAS room_exits "".    -- (optional) text listing the location exits. 
+    END ADD TO location. 
+    ----------------------------------------------------------------------------
+    ADD TO EVERY entity
+      IS NOT plural.
+ 
+    END ADD TO entity.
+    ----------------------------------------------------------------------------
     ADD TO EVERY thing
+      IS NOT worn.
+
       HAS ex "". -- text for examine.    
       VERB examine
         DOES
@@ -30,18 +37,23 @@ IMPORT 'inc_module.i'.
           END IF.
       END VERB examine.
     END ADD TO thing.
+    ----------------------------------------------------------------------------
+    EVERY CLOTHING IsA OBJECT.
+      
+    END EVERY CLOTHING.
+    ----------------------------------------------------------------------------
 
--- create wrapper location (indoors)
-THE house IsA location.
-  DESCRIPTION ""
-END THE house.
+    -- create wrapper location (indoors)    
+    THE house IsA location.    
+      DESCRIPTION ""    
+    END THE house.    
+    
+    THE ceiling IsA object AT house.    
+      DESCRIPTION ""    
+      HAS ex "The ceilings are very high in this house.".    
+    END THE ceiling.    
 
-THE ceiling IsA object AT house.
-  DESCRIPTION ""
-  HAS ex "The ceilings are very high in this house.".
-END THE ceiling.
-
---------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------
     
     THE kitchen IsA location AT house.    
       DESCRIPTION "Kitchen    
@@ -77,15 +89,15 @@ END THE ceiling.
       DESCRIPTION "Table    
                    description."    
     END THE.    
---------------------------------------------------------------------------------
-THE bedroom IsA location AT house.
-  DESCRIPTION "  Bedroom
-               description.  "
-  ENTERED "As you enter your bedroom you hear a rustling sound across the floor
-           and under the bed. Mice?"
-END THE bedroom.
+    ----------------------------------------------------------------------------
+    THE bedroom IsA location AT house.   
+      DESCRIPTION "  Bedroom   
+                   description.  "   
+      ENTERED "As you enter your bedroom you hear a rustling sound across the floor   
+               and under the bed. Mice?"   
+    END THE bedroom.   
 
---------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------
         
     -- VERB: LOOK/L    
     SYNTAX    
