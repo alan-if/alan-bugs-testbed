@@ -3,6 +3,9 @@
 --------------------------------------------------------------------------------
 -- This code below contains leading & trailing space on most lines.
 
+--
+--
+
 IMPORT 'inc_module.i'.
 
 ADD TO EVERY location
@@ -10,16 +13,49 @@ HAS room_alt_name "". -- (optional) alternative name to show in events.
 HAS room_exits "".    -- (optional) text listing the location exits.
 END ADD TO location.
 
+SYNTAX examine = examine (obj)
+WHERE obj IsA THING
+ELSE "You can only examine things."
+examine = x (obj).
+
+ADD TO EVERY thing
+HAS ex "". -- text for examine.
+VERB examine
+DOES
+IF THIS:ex <> ""
+THEN
+SAY THIS:ex.
+ELSE
+"You notice nothing unusual about $1."
+END IF.
+END VERB examine.
+END ADD TO thing.
+
+-- create wrapper location (indoors)
+THE house IsA location.
+DESCRIPTION ""
+END THE house.
+
+THE ceiling IsA object AT house.
+DESCRIPTION ""
+HAS ex "The ceilings are very high in this house.".
+END THE ceiling.
+
 --------------------------------------------------------------------------------
 
-THE kitchen IsA LOCATION
+THE kitchen IsA location AT house.
 DESCRIPTION "Kitchen
 description.
 It's your kitchen. $n
 "
 EXIT north TO bedroom
-DOES "You exit the KITCHEN to the bedroom.$p"
+DOES
+SAY door:traverse_txt.
+"$nYou leave the KITCHEN to go to the bedroom.$p"
 END EXIT.
+HAS room_exits
+"NORTH
+to the dressing room.".
 END THE.
 
 THE door IsA object AT kitchen.
@@ -34,7 +70,7 @@ description."
 END IF.
 NAME door.
 HAS traverse_txt
-"As you move toward the doors they automagically slide open before you.".
+"As you move toward the door it automagically slides open before you.".
 END THE.
 
 THE table IsA object AT kitchen.
@@ -42,10 +78,11 @@ DESCRIPTION "Table
 description."
 END THE.
 --------------------------------------------------------------------------------
-THE bedroom IsA location.
+THE bedroom IsA location AT house.
 DESCRIPTION "  Bedroom
 description.  "
-
+ENTERED "As you enter your bedroom you hear a rustling sound across the floor
+and under the bed. Mice?"
 END THE bedroom.
 
 --------------------------------------------------------------------------------

@@ -14,6 +14,16 @@ Kitchen
 Kitchen description. It's your kitchen.
  Close door description. Table description.
 
+> x table
+You notice nothing unusual about table.
+
+> x door
+You notice nothing unusual about kitchen door.
+
+> ; NOTE: "ceiling" is in wrapper location "house"!
+> x ceiling
+The ceilings are very high in this house.
+
 > wait
 Time passes.
 
@@ -23,8 +33,11 @@ Kitchen description. It's your kitchen.
  Close door description. Table description.
 
 > north
-You exit the KITCHEN to the bedroom.
+As you move toward the door it automagically slides open before you. 
+You leave the KITCHEN to go to the bedroom.
 
+As you enter your bedroom you hear a rustling sound across the floor and
+under the bed. Mice?
 
 Bedroom
  Bedroom description. 

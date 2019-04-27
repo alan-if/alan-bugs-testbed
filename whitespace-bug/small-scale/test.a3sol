@@ -4,6 +4,10 @@
 ; *                                                                            *
 ; ******************************************************************************
 look
+x table
+x door
+; NOTE: "ceiling" is in wrapper location "house"!
+x ceiling
 wait
 look
 north
