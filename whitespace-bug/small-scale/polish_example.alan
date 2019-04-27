@@ -1,45 +1,71 @@
 --------------------------------------------------------------------------------
 -- Test whitespace inconsistencies in transcripts
 --------------------------------------------------------------------------------
--- This adventure contains 3 leading & trailing space on each line.
+-- This code below contains leading & trailing space on most lines.
 
-THE kitchen IsA LOCATION   
-DESCRIPTION "Kitchen   
-description."   
-END THE.   
+IMPORT 'inc_module.i'.
 
-THE door IsA object AT kitchen.   
-IS NOT open.   
-DESCRIPTION   
-IF THIS IS open   
-THEN "Open door   
-description."   
-ELSE "Close door   
-description."   
-END IF.   
-END THE.   
+ADD TO EVERY location
+HAS room_alt_name "". -- (optional) alternative name to show in events.
+HAS room_exits "".    -- (optional) text listing the location exits.
+END ADD TO location.
 
-THE table IsA object AT kitchen.   
-DESCRIPTION "Table   
-description."   
-END THE.   
+--------------------------------------------------------------------------------
 
--- VERB: LOOK/L   
-SYNTAX   
-'look' = 'look'.   
-'look' = l.   
+THE kitchen IsA LOCATION
+DESCRIPTION "Kitchen
+description.
+It's your kitchen. $n
+"
+EXIT north TO bedroom
+DOES "You exit the KITCHEN to the bedroom.$p"
+END EXIT.
+END THE.
 
-VERB 'look'   
-DOES LOOK.   
-END VERB.   
+THE door IsA object AT kitchen.
+NAME 'kitchen door'.
+IS NOT open.
+DESCRIPTION
+IF THIS IS open
+THEN "Open door
+description."
+ELSE "Close door
+description."
+END IF.
+NAME door.
+HAS traverse_txt
+"As you move toward the doors they automagically slide open before you.".
+END THE.
 
--- VERB: WAIT/Z   
-SYNTAX   
-'wait' = 'wait'.   
-'wait' = z.   
+THE table IsA object AT kitchen.
+DESCRIPTION "Table
+description."
+END THE.
+--------------------------------------------------------------------------------
+THE bedroom IsA location.
+DESCRIPTION "  Bedroom
+description.  "
 
-VERB 'wait'   
-DOES "Time passes."   
-END VERB.   
+END THE bedroom.
 
-START AT kitchen.   
+--------------------------------------------------------------------------------
+
+-- VERB: LOOK/L
+SYNTAX
+'look' = 'look'.
+'look' = l.
+
+VERB 'look'
+DOES LOOK.
+END VERB.
+
+-- VERB: WAIT/Z
+SYNTAX
+'wait' = 'wait'.
+'wait' = z.
+
+VERB 'wait'
+DOES "Time passes."
+END VERB.
+
+START AT kitchen.

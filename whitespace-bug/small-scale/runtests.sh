@@ -26,10 +26,12 @@ function Compile()
 
 function PolishSource()
 {
+  # Remove leading AND trailing whitespaces
   Separator
   echo -e "\e[94mCOPY \"\e[93m$1\e[94m\" TO \"\e[93m$2\e[94m\" AND POLISH WHITESPACE"
   sed -E \
   -e "s/^ +//" \
+  -e "s/ +$//" \
   $1 > $2
   # ---------------------------------------
   # If OS is Windows, normalize EOL to CRLF
