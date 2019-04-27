@@ -1,0 +1,20 @@
+north
+north
+remove XYZZY
+examine basket
+inventory
+examine boxers
+DBG_CLOTHES boxers
+put boxers in basket
+DBG_CLOTHES boxers
+examine basket
+west
+examine assistant
+DBG_CLOTHES boots
+take assistant boots
+ask assistant for boots
+DBG_CLOTHES boots
+wear boots
+remove sneakers
+wear boots
+remove XYZZY

@@ -12,14 +12,22 @@ DEL *.a3c *.a3log
 :: Compile using StdLib1:
 CALL alan.exe -import ..\ -import StdLib1\ %ADV%
 RENAME ega.a3c ega1.a3c
+:: Test #1
 CALL :ExecTest ega1.a3c test.a3sol
 RENAME test.a3log test1.a3log
+:: Test #1 Without comments in commands script
+CALL :ExecTest ega1.a3c test-no-comments.a3sol
+RENAME test-no-comments.a3log test1-no-comments.a3log
 
 :: Compile using StdLib2:
 CALL alan.exe -import ..\ -import StdLib2\ %ADV%
 RENAME ega.a3c ega2.a3c
+:: Test #1
 CALL :ExecTest ega2.a3c test.a3sol
 RENAME test.a3log test2.a3log
+:: Test #1 Without comments in commands script
+CALL :ExecTest ega2.a3c test-no-comments.a3sol
+RENAME test-no-comments.a3log test2-no-comments.a3log
 EXIT /B
 
 :: -----------------------------------------------------------------------------

@@ -19,10 +19,13 @@ These tests try to recreate the problem in transcript whitespace caused by clean
 
 - [`test.bat`](./test.bat) — tests script.
 
-There is only one test adventure and command script:
+There is only one test adventure and two command scripts:
 
 - [`ega.alan`](./ega.alan)
 - [`test.a3sol`](./test.a3sol)
+- [`test-no-comments.a3sol`](./test-no-comments.a3sol) — identical to `test.a3sol`, but all comment lines are stripped out.
+
+> __NOTE__ — the `test-no-comments.a3sol` variation was created to test if the problem might have been caused by comment lines in the commands scripts (expecially empty comment lines). But it turned out that the whitespace bug is found also in the transcripts without comments. At least now we can rule out comments as the source of the problem.
 
 The adventure is compiled twice, using two different StdLib versions:
 
@@ -37,11 +40,13 @@ Files ending in "1" were compiled against [`StdLib1`](./StdLib1):
 
 - [`ega1.a3c`](./ega1.a3c)
 - [`test1.a3log`](./test1.a3log)
+- [`test1-no-comments.a3log`](./test1-no-comments.a3log)
 
 The others agains [`StdLib2`](./StdLib2):
 
 - [`ega2.a3c`](./ega2.a3c)
 - [`test2.a3log`](./test2.a3log)
+- [`test2-no-comments.a3log`](./test2-no-comments.a3log)
 
 Although the source files are the same (except for whitespace), the resulting transcripts show differences in whitespace, as shown in the diff report:
 
