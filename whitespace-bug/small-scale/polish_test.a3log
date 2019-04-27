@@ -1,0 +1,19 @@
+
+
+Kitchen
+Kitchen description. Close door description. Table description.
+
+> look
+Kitchen
+Kitchen description. Close door description. Table description.
+
+> wait
+Time passes.
+
+> look
+Kitchen
+Kitchen description. Close door description. Table description.
+
+> 
+
+Do you want to UNDO, RESTART, RESTORE or QUIT ? 

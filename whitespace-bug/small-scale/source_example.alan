@@ -1,0 +1,45 @@
+--------------------------------------------------------------------------------
+-- Test whitespace inconsistencies in transcripts
+--------------------------------------------------------------------------------
+-- This adventure contains 3 leading & trailing space on each line.
+
+   THE kitchen IsA LOCATION   
+     DESCRIPTION "Kitchen   
+                  description."   
+   END THE.   
+   
+   THE door IsA object AT kitchen.   
+     IS NOT open.   
+     DESCRIPTION   
+       IF THIS IS open   
+         THEN "Open door   
+               description."   
+         ELSE "Close door   
+               description."   
+       END IF.   
+   END THE.   
+   
+   THE table IsA object AT kitchen.   
+     DESCRIPTION "Table   
+                  description."   
+   END THE.   
+   
+   -- VERB: LOOK/L   
+   SYNTAX   
+     'look' = 'look'.   
+     'look' = l.   
+   
+   VERB 'look'   
+     DOES LOOK.   
+   END VERB.   
+   
+   -- VERB: WAIT/Z   
+   SYNTAX   
+     'wait' = 'wait'.   
+     'wait' = z.   
+   
+   VERB 'wait'   
+     DOES "Time passes."   
+   END VERB.   
+   
+   START AT kitchen.   
