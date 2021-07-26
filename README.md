@@ -16,6 +16,7 @@ For any questions and discussions, either [open an issue] here or join the conve
 - [Introduction](#introduction)
     - [Submitting a Bug](#submitting-a-bug)
 - [Project Organization](#project-organization)
+    - [Useful Verbs](#useful-verbs)
 - [Current Bugs Examples](#current-bugs-examples)
 - [Artistic License 2.0](#artistic-license-20)
 
@@ -55,11 +56,19 @@ A copy of [Anssi Räisänen]'s  2.x (dev snapshot) is provided in oreder to allo
 
 - [`/StdLib/`](./StdLib)
 
+## Useful Verbs
+
+To reduce code typing in each test adventure, some core verbs are provided to cover basic commands:
+
+- [`/_core-verbs/`](./_core-verbs/)
+
+
 # Current Bugs Examples
 
-|                 folder                 |                  description                  |       Alan SDK       |  status |
-|----------------------------------------|-----------------------------------------------|----------------------|---------|
-| [`/whitespace-bug/`](./whitespace-bug) | inconsistent white space in room descriptions | v3.0beta6 build 1880 | pending |
+|                    folder                   |                  description                  |       Alan SDK       | Issue |  status |
+|---------------------------------------------|-----------------------------------------------|----------------------|-------|---------|
+| [`/whitespace-bug/`](./whitespace-bug/)     | inconsistent white space in room descriptions | v3.0beta6 build 1880 |       | solved  |
+| [`/container-limits/`](./container-limits/) | TAKE ALL exceeding `Limit Count` crashes      | v3.0beta8 build 2220 | [#34] | pending |
 
 # Artistic License 2.0
 
@@ -84,9 +93,12 @@ This project is governed by the terms of the Artistic License 2.0.
 
 [report a bug]: #submitting-a-bug
 
+<!-- Issues -->
+
+[#34]: https://github.com/alan-if/alan/issues/34
+
 <!-- people -->
 
 [Anssi Räisänen]: https://github.com/AnssiR66 "View Anssi Räisänen's GitHub profile"
-
 
 <!-- EOF -->

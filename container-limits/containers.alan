@@ -1,0 +1,43 @@
+--==============================================================================
+--------------------------------------------------------------------------------
+-- Testing Container Limits
+--------------------------------------------------------------------------------
+--==============================================================================
+
+Import 'core-verbs.i'.
+
+The hero IsA actor
+  Container
+    Limits Count 3
+      then "You can't carry more than three items!"
+End the hero.
+
+
+The lab IsA location
+  Name 'ALAN Test Lab'.
+End the.
+
+The ball IsA object at lab.
+End the.
+
+The bottle IsA object at lab.
+End the.
+
+The letter IsA object at lab.
+End the.
+
+The pie IsA object at lab.
+End the.
+
+The jar IsA object at lab.
+End the.
+
+--------------------------------------------------------------------------------
+
+Start at lab.
+
+  "Welcome to the ALAN Test Laboratories!
+ $pHere's were all the ALAN SDKs testing happens,
+   at the hands of highly qualified technicians.
+   Very low salaries, prolonged work shifts,
+   extremely high health risks."

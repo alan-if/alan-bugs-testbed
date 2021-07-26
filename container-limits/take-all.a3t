@@ -1,0 +1,32 @@
+
+Welcome to the ALAN Test Laboratories!
+
+Here's were all the ALAN SDKs testing happens, at the hands of highly
+qualified technicians. Very low salaries, prolonged work shifts, 
+extremely high health risks.
+
+
+ALAN Test Lab
+There is a ball, a bottle, a letter, a pie and a jar here.
+
+> take all
+(ball) You pick up the ball.
+
+(bottle) You pick up the bottle.
+
+(letter) You pick up the letter.
+
+(pie) You pick up the pie. You can't carry more than three items!
+
+(jar) 
+
+As you enter the twilight zone of Adventures, you stumble and fall to
+your knees. In front of you, you can vaguely see the outlines of an
+Adventure that never was.
+
+APPLICATION ERROR: Interpreter recursion.
+
+<If you are playing this piece of Interactive Fiction, please help the
+author to debug this programming error. Send an exact transcript of the
+commands that led to this error to the author. Thank you! If you *are*
+the author, then you have to figure this out before releasing the game.>
