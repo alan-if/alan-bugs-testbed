@@ -1,0 +1,51 @@
+
+Welcome to the ALAN Test Laboratories!
+
+Here's were all the ALAN SDKs testing happens, at the hands of highly
+qualified technicians. Very low salaries, prolonged work shifts, 
+extremely high health risks.
+
+========================
+TESTING CONTAINER LIMITS 
+========================
+Player can carry max 3 items.
+The Bag can contain max 4 items.
+-----------------------------------------
+
+
+ALAN Test Lab
+There is a bag, a ball, a bottle, a box, a jar, a letter, a nail, a pie 
+and a stone here.
+
+> take bag
+You pick up the bag.
+
+> put all in bag
+(ball) (first taking the ball)
+You put the ball into the bag.
+
+(bottle) (first taking the bottle)
+You put the bottle into the bag.
+
+(box) (first taking the box)
+You put the box into the bag.
+
+(jar) (first taking the jar)
+You put the jar into the bag.
+
+(letter) (first taking the letter)
+You put the letter into the bag. The bag can't contain more than four
+items!
+
+(nail) 
+
+As you enter the twilight zone of Adventures, you stumble and fall to
+your knees. In front of you, you can vaguely see the outlines of an
+Adventure that never was.
+
+APPLICATION ERROR: Interpreter recursion.
+
+<If you are playing this piece of Interactive Fiction, please help the
+author to debug this programming error. Send an exact transcript of the
+commands that led to this error to the author. Thank you! If you *are*
+the author, then you have to figure this out before releasing the game.>

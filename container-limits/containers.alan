@@ -6,16 +6,25 @@
 
 Import 'core-verbs.i'.
 
+The lab IsA location
+  Name 'ALAN Test Lab'.
+End the.
+
 The hero IsA actor
   Container
     Limits Count 3
       then "You can't carry more than three items!"
-End the hero.
-
-
-The lab IsA location
-  Name 'ALAN Test Lab'.
 End the.
+
+The bag IsA object at lab.
+  Container
+    Limits Count 4
+      then "The bag can't contain more than four items!"
+End the.
+
+--------------------------------------------------------------------------------
+-- Pick-up Test Objects
+--------------------------------------------------------------------------------
 
 The ball IsA object at lab.
 End the.
@@ -23,13 +32,22 @@ End the.
 The bottle IsA object at lab.
 End the.
 
+The box IsA object at lab.
+End the.
+
+The jar IsA object at lab.
+End the.
+
 The letter IsA object at lab.
+End the.
+
+The nail IsA object at lab.
 End the.
 
 The pie IsA object at lab.
 End the.
 
-The jar IsA object at lab.
+The stone IsA object at lab.
 End the.
 
 --------------------------------------------------------------------------------
@@ -44,5 +62,6 @@ Start at lab.
  $p========================
  $nTESTING CONTAINER LIMITS
  $n========================
- $pPlayer can carry max 3 items.
+ $nPlayer can carry max 3 items.
+ $nThe Bag can contain max 4 items.
  $n-----------------------------------------"

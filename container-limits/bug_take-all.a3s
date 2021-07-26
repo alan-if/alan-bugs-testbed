@@ -1,0 +1,9 @@
+; ====================================================
+; * * *  TAKE ALL BUG  * * *
+; ----------------------------------------------------
+; When the number of items matched by ALL exceeds the
+; maximum number of allowed items by 2 or more object,
+; ARun crashes at second exceeding item!
+; ====================================================
+; The hero carrying limit is max 3 objects:
+take all

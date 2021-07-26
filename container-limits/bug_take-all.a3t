@@ -1,0 +1,48 @@
+
+Welcome to the ALAN Test Laboratories!
+
+Here's were all the ALAN SDKs testing happens, at the hands of highly
+qualified technicians. Very low salaries, prolonged work shifts, 
+extremely high health risks.
+
+========================
+TESTING CONTAINER LIMITS 
+========================
+Player can carry max 3 items.
+The Bag can contain max 4 items.
+-----------------------------------------
+
+
+ALAN Test Lab
+There is a bag, a ball, a bottle, a box, a jar, a letter, a nail, a pie 
+and a stone here.
+
+> ; ====================================================
+> ; * * *  TAKE ALL BUG  * * *
+> ; ----------------------------------------------------
+> ; When the number of items matched by ALL exceeds the
+> ; maximum number of allowed items by 2 or more object,
+> ; ARun crashes at second exceeding item!
+> ; ====================================================
+> ; The hero carrying limit is max 3 objects:
+> take all
+(bag) You pick up the bag.
+
+(ball) You pick up the ball.
+
+(bottle) You pick up the bottle.
+
+(box) You pick up the box. You can't carry more than three items!
+
+(jar) 
+
+As you enter the twilight zone of Adventures, you stumble and fall to
+your knees. In front of you, you can vaguely see the outlines of an
+Adventure that never was.
+
+APPLICATION ERROR: Interpreter recursion.
+
+<If you are playing this piece of Interactive Fiction, please help the
+author to debug this programming error. Send an exact transcript of the
+commands that led to this error to the author. Thank you! If you *are*
+the author, then you have to figure this out before releasing the game.>

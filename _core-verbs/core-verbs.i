@@ -35,7 +35,7 @@ Syntax drop = drop (obj)*
   Where obj IsA object
     else "You can only handle objects."
 
-Syntax put = put (obj1) 'in' (obj2)
+Syntax put = put (obj1)* 'in' (obj2)
   Where obj1 IsA object
     else "You can only handle objects."
   And obj2 IsA object
@@ -60,9 +60,15 @@ Add to every object
 
   Verb put
     When obj1
-      Check obj1 in hero
-        else "You don't have $+1."
+      Check obj1 <> obj2
+        else "You can't put something into itself!"
+      -- Check obj1 in hero
+      --   else "You don't have $+1."
       Does
+        If obj1 not in hero
+          then "(first taking $+1)$n"
+          Locate obj1 in hero.
+        End if.
         "You put $+1 into $+2."
         Locate obj1 in obj2.
   End verb.

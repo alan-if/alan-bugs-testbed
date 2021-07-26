@@ -1,0 +1,9 @@
+; ====================================================
+; * * *  TAKE MULTIPLE OBJECTS BUG  * * *
+; ----------------------------------------------------
+; When the number of parameters exceeds the maximum
+; number of allowed items by 2 or more object, ARun
+; crashes at second exceeding item!
+; ====================================================
+; The hero carrying limit is max 3 objects:
+take BAG and BALL and BOTTLE and BOX and JAR

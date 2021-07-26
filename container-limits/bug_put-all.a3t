@@ -8,31 +8,41 @@ extremely high health risks.
 ========================
 TESTING CONTAINER LIMITS 
 ========================
-
 Player can carry max 3 items.
+The Bag can contain max 4 items.
 -----------------------------------------
 
 
 ALAN Test Lab
-There is a ball, a bottle, a letter, a pie and a jar here.
+There is a bag, a ball, a bottle, a box, a jar, a letter, a nail, a pie 
+and a stone here.
 
 > ; ====================================================
-> ; * * *  TAKE ALL BUG  * * *
+> ; * * *  PUT ALL BUG  * * *
 > ; ----------------------------------------------------
 > ; When the number of items matched by ALL exceeds the
 > ; maximum number of allowed items by 2 or more object,
 > ; ARun crashes at second exceeding item!
 > ; ====================================================
-> take all
-(ball) You pick up the ball.
+> ; The bag capacity limit is max 4 objects:
+> put all in bag
+(ball) (first taking the ball)
+You put the ball into the bag.
 
-(bottle) You pick up the bottle.
+(bottle) (first taking the bottle)
+You put the bottle into the bag.
 
-(letter) You pick up the letter.
+(box) (first taking the box)
+You put the box into the bag.
 
-(pie) You pick up the pie. You can't carry more than three items!
+(jar) (first taking the jar)
+You put the jar into the bag.
 
-(jar) 
+(letter) (first taking the letter)
+You put the letter into the bag. The bag can't contain more than four
+items!
+
+(nail) 
 
 As you enter the twilight zone of Adventures, you stumble and fall to
 your knees. In front of you, you can vaguely see the outlines of an

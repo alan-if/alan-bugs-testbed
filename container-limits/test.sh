@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -f *.a3t
+
 echo -e "\n## Compile Adventures"
 echo -e   "#####################\n"
 for adv in *.alan; do
