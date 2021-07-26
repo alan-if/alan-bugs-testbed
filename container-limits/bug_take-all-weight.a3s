@@ -1,0 +1,11 @@
+north
+; ====================================================
+; * * *  TAKE ALL BUG  * * *
+; ----------------------------------------------------
+; When two or more items matched by ALL exceed the max
+; allowed weight Limit, ARun crashes at second item
+; that can't be taken!
+; ====================================================
+; The hero carrying limit is max 20 units of weight,
+; which is equivalent to 2 objects from this room:
+take all

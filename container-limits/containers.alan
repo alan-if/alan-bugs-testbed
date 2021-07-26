@@ -6,53 +6,104 @@
 
 Import 'core-verbs.i'.
 
-The lab IsA location
-  Name 'ALAN Test Lab'.
+Add to every object
+  Has weight 0.
+End add to object.
+
+--==============================================================================
+-- Count-Limits Test Lab
+--==============================================================================
+
+The countLab IsA location
+  Name 'Count Limits Test Lab'.
+  Description
+    "This lab is for testing limits of counted items,
+     objects in this room are weightless.
+     To the north lies the weight-testing lab.$n"
+  Exit north, n
+    to weightLab.
 End the.
 
 The hero IsA actor
   Container
-    Limits Count 3
-      then "You can't carry more than three items!"
+    Limits
+      Count 3
+        then "You can't carry more than three items!"
+      Weight 20
+        then "You can't carry more than 20 units of weight!"
 End the.
 
-The bag IsA object at lab.
+The bag IsA object at countLab.
   Container
     Limits Count 4
       then "The bag can't contain more than four items!"
 End the.
 
 --------------------------------------------------------------------------------
--- Pick-up Test Objects
+-- Count Test Objects
 --------------------------------------------------------------------------------
 
-The ball IsA object at lab.
+The ball IsA object at countLab.
 End the.
 
-The bottle IsA object at lab.
+The bottle IsA object at countLab.
 End the.
 
-The box IsA object at lab.
+The box IsA object at countLab.
 End the.
 
-The jar IsA object at lab.
+The jar IsA object at countLab.
 End the.
 
-The letter IsA object at lab.
+The letter IsA object at countLab.
 End the.
 
-The nail IsA object at lab.
+The nail IsA object at countLab.
 End the.
 
-The pie IsA object at lab.
+The pie IsA object at countLab.
 End the.
 
-The stone IsA object at lab.
+The stone IsA object at countLab.
 End the.
+
+--==============================================================================
+-- Weight-Limits Test Lab
+--==============================================================================
+
+The weightLab IsA location
+  Name 'Weight Limits Test Lab'.
+  Description
+    "This lab is for testing weight limits,
+     objects in this room weigh 10 units each.
+     To the south lies the count-testing lab.$n"
+  Exit south, s
+    to countLab.
+End the.
+
+Every heavyObj IsA object.
+  Has weight 10.
+End every heavyObj.
+
+The block IsA heavyObj at weightLab.
+End the.
+
+The bulk IsA heavyObj at weightLab.
+End the.
+
+The cube IsA heavyObj at weightLab.
+End the.
+
+The piramid IsA heavyObj at weightLab.
+End the.
+
+The sphere IsA heavyObj at weightLab.
+End the.
+
 
 --------------------------------------------------------------------------------
 
-Start at lab.
+Start at countLab.
 
   "Welcome to the ALAN Test Laboratories!
  $pHere's were all the ALAN SDKs testing happens,
@@ -62,6 +113,6 @@ Start at lab.
  $p========================
  $nTESTING CONTAINER LIMITS
  $n========================
- $nPlayer can carry max 3 items.
+ $nPlayer can carry max 3 items or 20 units of weight.
  $nThe Bag can contain max 4 items.
- $n-----------------------------------------"
+ $n---------------------------------------------------"

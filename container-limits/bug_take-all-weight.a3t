@@ -19,24 +19,29 @@ weightless. To the north lies the weight-testing lab.
 There is a bag, a ball, a bottle, a box, a jar, a letter, a nail, a pie 
 and a stone here.
 
+> north
+Weight Limits Test Lab
+This lab is for testing weight limits, objects in this room weigh 10
+units each. To the south lies the count-testing lab.
+There is a block, a bulk, a cube, a piramid and a sphere here.
+
 > ; ====================================================
 > ; * * *  TAKE ALL BUG  * * *
 > ; ----------------------------------------------------
-> ; When the number of items matched by ALL exceeds the
-> ; maximum number of allowed items by 2 or more object,
-> ; ARun crashes at second exceeding item!
+> ; When two or more items matched by ALL exceed the max
+> ; allowed weight Limit, ARun crashes at second item
+> ; that can't be taken!
 > ; ====================================================
-> ; The hero carrying limit is max 3 objects:
+> ; The hero carrying limit is max 20 units of weight,
+> ; which is equivalent to 2 objects from this room:
 > take all
-(bag) You pick up the bag.
+(block) You pick up the block.
 
-(ball) You pick up the ball.
+(bulk) You pick up the bulk.
 
-(bottle) You pick up the bottle.
+(cube) You pick up the cube. You can't carry more than 20 units of weight!
 
-(box) You pick up the box. You can't carry more than three items!
-
-(jar) 
+(piramid) 
 
 As you enter the twilight zone of Adventures, you stumble and fall to
 your knees. In front of you, you can vaguely see the outlines of an

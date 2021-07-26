@@ -8,12 +8,14 @@ extremely high health risks.
 ========================
 TESTING CONTAINER LIMITS 
 ========================
-Player can carry max 3 items.
+Player can carry max 3 items or 20 units of weight. 
 The Bag can contain max 4 items.
------------------------------------------
+---------------------------------------------------
 
 
-ALAN Test Lab
+Count Limits Test Lab
+This lab is for testing limits of counted items, objects in this room are
+weightless. To the north lies the weight-testing lab.
 There is a bag, a ball, a bottle, a box, a jar, a letter, a nail, a pie 
 and a stone here.
 
