@@ -29,9 +29,12 @@ For any questions and discussions, either [open an issue] here or join the conve
 The [Alan] language is still in beta stage, it's therefore important for its development toward the first stable release to find and report any bugs encountered.
 
 
-Some bugs pop-up unexpectedly during adventures creation, and it's not always easy to isolate their cause. Ideally, the best way to inform Alan developers about a bug is to extrapolate it from its context by creating a minimal viable example of its manifestation. But sometimes this is not an easy task due the complexity of the contex.
+Some bugs pop-up unexpectedly during adventures creation, and it's not always easy to isolate their cause.
+Ideally, the best way to inform Alan developers about a bug is to extrapolate it from its context by creating a minimal viable example of its manifestation.
+But sometimes this is not an easy task due the complexity of the context.
 
-Either way, this repository is the right place to publicly share examples of bugs. Publishing real code examples is much better than sending code examples pasted inside emails, and it grants Alan developers quicker access to the code.
+Either way, this repository is the right place to publicly share examples of bugs.
+Publishing real code examples is much better than sending code examples pasted inside emails, and it grants Alan developers quicker access to the code.
 
 ## Submitting a Bug
 
@@ -44,7 +47,8 @@ The former approach is quicker and preferable for bugs that can be easily descri
 
 The latter is the way to go when a full example is required to demonstrate a bug.
 
-Each example should be contributed in an isolated folder, to keep the project structure uncluttered. Clone the repository, add your example, and create a pull request.
+Each example should be contributed in an isolated folder, to keep the project structure uncluttered.
+Clone the repository, add your example, and create a pull request.
 
 In either case, don't forget to provide details about your OS, the version of the Alan SDK used, and a clear description of the bug.
 
@@ -60,7 +64,8 @@ A copy of [Anssi Räisänen]'s  2.x (dev snapshot) is provided in oreder to allo
 
 To reduce code typing in each test adventure, some core verbs are provided to cover basic commands:
 
-- [`/_core-verbs/`](./_core-verbs/)
+- [`/_core-verbs/`](./_core-verbs/):
+    + [`core-verbs.i`](./_core-verbs/core-verbs.i) — take, drop, put, look, i.
 
 
 # Current Bugs Examples
