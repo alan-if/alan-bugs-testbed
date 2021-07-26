@@ -1,2 +1,34 @@
+; ==============================================================================
+; TESTING INDERECT CONTAINMENT COUNT-LIMITS
+; ==============================================================================
+put BALL and BOTTLE and BOX and JAR in bag
+; Now the bag has reached its count limit!
+put LETTER in bag
+; Although the Hero can carry only 3 items he can pick the bag:
 take bag
-put all in bag
+; Regardless of how many items the bag contains, it counts as
+; a single item for player limits! In fact he can pick 2 more:
+take LETTER and NAIL
+; Now the Hero has reached its max carrying capacity:
+take pie
+; ------------------------------------------------------------------------------
+drop all BUT bag
+north
+; ==============================================================================
+; TESTING INDERECT CONTAINMENT ATTRIBUTE-LIMITS
+; ==============================================================================
+; The bag has no weight limits, but the Hero can only carry 20 weight units,
+; which equal 2 of the objects found in this room.
+drop bag
+put BLOCK and BULK and CUBE in bag
+; Now the bag contains 30 units of weight:
+take bag
+; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+; BUG: The hero shouldn't be able to pick it up!
+; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+drop BLOCK and BULK and CUBE
+; But trying to put in them in the carried bag
+; works as expected:
+put BLOCK and BULK and CUBE in bag
+; The third items couldn't be added because it
+; exceed the weight limit!

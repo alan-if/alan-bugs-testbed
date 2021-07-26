@@ -19,10 +19,10 @@ weightless. To the north lies the weight-testing lab.
 There is a bag, a ball, a bottle, a box, a jar, a letter, a nail, a pie 
 and a stone here.
 
-> take bag
-You pick up the bag.
-
-> put all in bag
+> ; ==============================================================================
+> ; TESTING INDERECT CONTAINMENT COUNT-LIMITS
+> ; ==============================================================================
+> put BALL and BOTTLE and BOX and JAR in bag
 (ball) (first taking the ball)
 You put the ball into the bag.
 
@@ -35,19 +35,93 @@ You put the box into the bag.
 (jar) (first taking the jar)
 You put the jar into the bag.
 
-(letter) (first taking the letter)
+> ; Now the bag has reached its count limit!
+> put LETTER in bag
+(first taking the letter)
 You put the letter into the bag. The bag can't contain more than four
 items!
 
-(nail) 
+> ; Although the Hero can carry only 3 items he can pick the bag:
+> take bag
+You pick up the bag.
 
-As you enter the twilight zone of Adventures, you stumble and fall to
-your knees. In front of you, you can vaguely see the outlines of an
-Adventure that never was.
+> ; Regardless of how many items the bag contains, it counts as
+> ; a single item for player limits! In fact he can pick 2 more:
+> take LETTER and NAIL
+(letter) You pick up the letter.
 
-APPLICATION ERROR: Interpreter recursion.
+(nail) You pick up the nail.
 
-<If you are playing this piece of Interactive Fiction, please help the
-author to debug this programming error. Send an exact transcript of the
-commands that led to this error to the author. Thank you! If you *are*
-the author, then you have to figure this out before releasing the game.>
+> ; Now the Hero has reached its max carrying capacity:
+> take pie
+You pick up the pie. You can't carry more than three items!
+
+> ; ------------------------------------------------------------------------------
+> drop all BUT bag
+(ball) You drop the ball.
+
+(bottle) You drop the bottle.
+
+(box) You drop the box.
+
+(jar) You drop the jar.
+
+(letter) You drop the letter.
+
+(nail) You drop the nail.
+
+> north
+Weight Limits Test Lab
+This lab is for testing weight limits, objects in this room weigh 10
+units each. To the south lies the count-testing lab.
+There is a block, a bulk, a cube, a piramid and a sphere here.
+
+> ; ==============================================================================
+> ; TESTING INDERECT CONTAINMENT ATTRIBUTE-LIMITS
+> ; ==============================================================================
+> ; The bag has no weight limits, but the Hero can only carry 20 weight units,
+> ; which equal 2 of the objects found in this room.
+> drop bag
+You drop the bag.
+
+> put BLOCK and BULK and CUBE in bag
+(block) (first taking the block)
+You put the block into the bag.
+
+(bulk) (first taking the bulk)
+You put the bulk into the bag.
+
+(cube) (first taking the cube)
+You put the cube into the bag.
+
+> ; Now the bag contains 30 units of weight:
+> take bag
+You pick up the bag.
+
+> ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> ; BUG: The hero shouldn't be able to pick it up!
+> ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> drop BLOCK and BULK and CUBE
+(block) You drop the block.
+
+(bulk) You drop the bulk.
+
+(cube) You drop the cube.
+
+> ; But trying to put in them in the carried bag
+> ; works as expected:
+> put BLOCK and BULK and CUBE in bag
+(block) (first taking the block)
+You put the block into the bag.
+
+(bulk) (first taking the bulk)
+You put the bulk into the bag.
+
+(cube) (first taking the cube)
+You can't carry more than 20 units of weight!
+
+> ; The third items couldn't be added because it
+> ; exceed the weight limit!
+> 
+
+Do you want to UNDO, RESTART, RESTORE or QUIT ? 
