@@ -1,16 +1,62 @@
+##################################################
+#  The ALAN IF Bugs Testbed Project:             #
+#  https://github.com/alan-if/alan-bugs-testbed  #
+##################################################
 * text=auto
 
-*.a3c      binary
-*.a3log    text
-*.a3sol    text
-*.alan     text
-*.i        text
-*.ifid     text
+# ==============================================================================
+#                               ALAN RELATED FILES
+# ==============================================================================
+[attr]Alan text linguist-language=Alan linguist-detectable=true
 
-*.bat      text eol=crlf
-*.sh       text eol=lf
+## Alan Sources
+###############
+*.alan   Alan
+*.i      Alan
+*.ifid   text linguist-generated=true
 
+## Alan Story-Files
+###################
+*.a3c   binary
+*.a3r   binary
+*.sav   binary
+
+## Adventures Solutions & Transcripts
+#####################################
+*.a3s   text linguist-detectable=false
+*.a3t   text linguist-generated=true
+*.log   text linguist-generated=true
+
+## AlanIDE Files
+################
+.project   text linguist-language=XML linguist-generated=true
+
+# ==============================================================================
+#                                GENERIC SETTINGS
+# ==============================================================================
+
+## Repository Configuration
+###########################
+.editorconfig    text eol=lf
+.travis.yml      text eol=lf
+.gitattributes   text eol=lf
+.gitconfig       text eol=lf
+.gitignore       text eol=lf
+.gitmodules      text eol=lf
+
+## Shell/CMD Scripts
+####################
+*.bat   text eol=crlf
+*.com   text eol=crlf
+*.sh    text eol=lf
+
+## Documentation
+################
+*.ad         text
+*.adoc       text
+*.asciidoc   text
 *.md         text
+*.txt        text
 
-.gitattributes text
-.gitignore     text
+
+# EOF #

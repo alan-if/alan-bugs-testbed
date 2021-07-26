@@ -1,6 +1,71 @@
+##################################################
+#  The ALAN IF Bugs Testbed Project:             #
+#  https://github.com/alan-if/alan-bugs-testbed  #
+##################################################
+
+*.tmp
+
+## ==========
+## Alan Files
+## ==========
 *.a3c
 *.ifid
+*.log
+*.sav
 
+## =============
+## AlanIDE Files
+## =============
+.project
+
+## ===============
+## Misc TEMP Files
+## ===============
+
+# Chrome's temporary logs:
+debug.log
+
+## Misc Work Files
+## ===============
+
+# Temporary/backup or removed files and folders:
+___*
 ___*.*
+
+# Links and URLs
 *.lnk
 *.url
+
+# Binary executables
+
+*.app
+*.dll
+*.dylib
+*.exe
+*.out
+*.so
+
+# ==============================================================================
+#                             COMMON IGNORE PATTERNS
+# ==============================================================================
+# Common ignore patterns for Windows, Linux and macOS.
+
+$RECYCLE.BIN/
+*.stackdump
+*~
+._*
+.AppleDouble
+.directory
+.DS_Store
+.fuse_hidden*
+.LSOverride
+.nfs*
+.Trash-*
+[Dd]esktop.ini
+ehthumbs.db
+ehthumbs_vista.db
+Icon
+Thumbs.db
+Thumbs.db:encryptable
+
+# EOF #

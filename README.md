@@ -78,7 +78,7 @@ This project is governed by the terms of the Artistic License 2.0.
 
 
 <!-----------------------------------------------------------------------------
-                               REFERENCE LINKS                                
+                               REFERENCE LINKS
 ------------------------------------------------------------------------------>
 
 [Open an issue]: https://github.com/alan-if/alan-bugs-testbed/issues/new "Clik to open an issue to report a bug"
