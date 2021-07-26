@@ -4,7 +4,7 @@ A place to submit examples of bugs in [ALAN] Interactive Fiction Language, in or
 
 Anyone can [report a bug] by providing code examples to this repository via pull requests.
 
-For any questions and discussions, either [open an issue] here or join the conversation via email on the [Alan-IF Yahoo group].
+For any questions and discussions, either [open an issue] here or join the conversation via email on the [Alan-IF Google group].
 
 
 -----
@@ -81,11 +81,11 @@ This project is governed by the terms of the Artistic License 2.0.
                                REFERENCE LINKS
 ------------------------------------------------------------------------------>
 
-[Open an issue]: https://github.com/alan-if/alan-bugs-testbed/issues/new "Clik to open an issue to report a bug"
+[Open an issue]: https://github.com/alan-if/alan-bugs-testbed/issues/new "Click to open an issue to report a bug"
 
 <!-- Alan -->
 
-[Alan-IF Yahoo group]: https://groups.yahoo.com/neo/groups/alan-if/info "Visit the Alan-IF Yahoo group"
+[Alan-IF Google group]: https://groups.google.com/g/alan-if/ "Visit the Alan-IF Discussions group at Google"
 [ALAN]: https://www.alanif.se/ "Visit Alan website"
 [Standard Library]: https://github.com/AnssiR66/AlanStdLib "Go to the Alan Standard Library repository on GitHub"
 
