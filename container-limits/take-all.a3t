@@ -5,10 +5,24 @@ Here's were all the ALAN SDKs testing happens, at the hands of highly
 qualified technicians. Very low salaries, prolonged work shifts, 
 extremely high health risks.
 
+========================
+TESTING CONTAINER LIMITS 
+========================
+
+Player can carry max 3 items.
+-----------------------------------------
+
 
 ALAN Test Lab
 There is a ball, a bottle, a letter, a pie and a jar here.
 
+> ; ====================================================
+> ; * * *  TAKE ALL BUG  * * *
+> ; ----------------------------------------------------
+> ; When the number of items matched by ALL exceeds the
+> ; maximum number of allowed items by 2 or more object,
+> ; ARun crashes at second exceeding item!
+> ; ====================================================
 > take all
 (ball) You pick up the ball.
 
