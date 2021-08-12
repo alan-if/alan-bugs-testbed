@@ -70,10 +70,10 @@ To reduce code typing in each test adventure, some core verbs are provided to co
 
 # Current Bugs Examples
 
-|                    folder                   |                  description                  |       Alan SDK       | Issue |  status |
-|---------------------------------------------|-----------------------------------------------|----------------------|-------|---------|
-| [`/whitespace-bug/`](./whitespace-bug/)     | inconsistent white space in room descriptions | v3.0beta6 build 1880 |       | solved  |
-| [`/container-limits/`](./container-limits/) | TAKE ALL exceeding `Limit Count` crashes      | v3.0beta8 build 2220 | [#34] | pending |
+|                    folder                   |                  description                  |       Alan SDK       | Issue | status |
+|---------------------------------------------|-----------------------------------------------|----------------------|-------|--------|
+| [`/whitespace-bug/`](./whitespace-bug/)     | inconsistent white space in room descriptions | v3.0beta6 build 1880 |       | solved |
+| [`/container-limits/`](./container-limits/) | TAKE ALL exceeding `Limit Count` crashes      | v3.0beta8 build 2220 | [#34] | solved |
 
 # Artistic License 2.0
 
